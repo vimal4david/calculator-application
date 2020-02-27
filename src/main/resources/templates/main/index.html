@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head data-th-replace="_fragments :: head"></head>
+
+<body>
+
+<h1 data-th-text="${title}">Give me a title!</h1>
+
+<form method="post" data-th-object="${calculationModel}">
+
+    <div>
+        <label>Number 1</label>
+        <input data-th-field="*{number1}" />
+    </div>
+
+    <div>
+        <label>Number 2</label>
+        <input data-th-field="*{number2}" />
+    </div>
+
+
+    <div>
+        <label>Calculation Type</label>
+        <select data-th-field="*{calculationType}">
+            <option data-th-each="calculationType : ${T(com.dyson.calculator.models.CalculationType).values()}"
+                    data-th-value="${calculationType}"
+                    data-th-text="${calculationType}">
+            </option>
+        </select>
+    </div>
+
+    <div>
+        <button type="submit">Calculate!</button>
+    </div>
+
+    <ul class="errors" data-th-if="${#fields.hasErrors('*')}">
+        <li data-th-errors="*{number1}">There is an error with number 1</li>
+        <li data-th-errors="*{number2}">There is an error with number 2</li>
+    </ul>
+
+</form>
+
+</body>
+</html>
