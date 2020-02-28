@@ -23,6 +23,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
 		<sortpom-maven-plugin.version>2.11.0</sortpom-maven-plugin.version>
+        <spotbugs-maven-plugin.version>3.1.12.2</spotbugs-maven-plugin.version>
     </properties>
 
     <dependencies>
@@ -59,9 +60,9 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <!-- Static Code Analysers -->
-            <!-- Sort the POM file as per Convention of the Maven team -->
-            <!-- https://maven.apache.org/developers/conventions/code.html -->
+            <!--Static Code Analysers-->
+            <!--Sort the POM file as per Convention of the Maven team-->
+            <!--https://maven.apache.org/developers/conventions/code.html-->
             <plugin>
                 <groupId>com.github.ekryd.sortpom</groupId>
                 <artifactId>sortpom-maven-plugin</artifactId>
@@ -72,6 +73,21 @@
                             <goal>sort</goal>
                         </goals>
                         <phase>verify</phase>
+                    </execution>
+                </executions>
+            </plugin>
+            <!--Spotbugs plugin looks for Java program bugs and fail the build-->
+            <!--https://spotbugs.github.io/spotbugs-maven-plugin/index.html-->
+            <plugin>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs-maven-plugin</artifactId>
+                <version>${spotbugs-maven-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
                     </execution>
                 </executions>
             </plugin>
