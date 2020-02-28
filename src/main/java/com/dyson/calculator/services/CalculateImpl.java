@@ -54,7 +54,7 @@ public class CalculateImpl implements Calculate {
      */
     @Override
     public Integer Divide(Integer dividend, Integer divisor) {
-        return dividend / divisor;
+        return (dividend == 0 || divisor == 0) ? 0 : dividend / divisor;
     }
 
     /**
