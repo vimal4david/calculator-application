@@ -28,10 +28,7 @@ public class CalculateImpl implements Calculate {
      * @return The result of the subtraction of one number from another
      */
     @Override
-    public Integer Subtract(Integer number1, Integer number2) {
-        // TODO: Dale: Haven't got time to implement, I'll do it later!
-        return number1;
-    }
+    public Integer Subtract(Integer number1, Integer number2) { return number1 - number2; }
 
     /**
      * Multiplies one number with another
