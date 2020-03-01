@@ -65,6 +65,7 @@ public class StaticPageController {
 
             case Subtraction:
                 answer = calculate.Subtract(number1, number2);
+                break;
 
             case Division:
                 answer = calculate.Divide(number1, number2);
