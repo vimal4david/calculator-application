@@ -19,13 +19,14 @@
     </parent>
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <dependency-check-maven.version>5.3.0</dependency-check-maven.version>
         <java.version>1.8</java.version>
-		<sortpom-maven-plugin.version>2.11.0</sortpom-maven-plugin.version>
-        <spotbugs-maven-plugin.version>3.1.12.2</spotbugs-maven-plugin.version>
         <maven-pmd-plugin.version>3.13.0</maven-pmd-plugin.version>
         <maven-checkstyle-plugin.version>3.1.1</maven-checkstyle-plugin.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <sortpom-maven-plugin.version>2.11.0</sortpom-maven-plugin.version>
+        <spotbugs-maven-plugin.version>3.1.12.2</spotbugs-maven-plugin.version>
     </properties>
 
     <dependencies>
@@ -119,6 +120,21 @@
                     <execution>
                         <id>validate</id>
                         <phase>validate</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.owasp</groupId>
+                <artifactId>dependency-check-maven</artifactId>
+                <version>${dependency-check-maven.version}</version>
+                <configuration>
+                    <failBuildOnCVSS>1</failBuildOnCVSS>
+                </configuration>
+                <executions>
+                    <execution>
                         <goals>
                             <goal>check</goal>
                         </goals>
