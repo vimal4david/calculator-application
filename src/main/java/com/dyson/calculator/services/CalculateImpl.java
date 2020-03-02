@@ -1,7 +1,6 @@
 package com.dyson.calculator.services;
 
 import org.springframework.stereotype.Service;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 /**
  * Implements calculations between numbers
@@ -63,6 +62,7 @@ public class CalculateImpl implements Calculate {
      */
     @Override
     public Integer Power(Integer base, Integer exponent) {
-        throw new NotImplementedException();
+        //TO DO validation to check the range and throw exception
+        return (int) Math.pow(base, exponent);
     }
 }
