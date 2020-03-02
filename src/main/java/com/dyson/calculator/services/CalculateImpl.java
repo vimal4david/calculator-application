@@ -15,7 +15,7 @@ public class CalculateImpl implements Calculate {
      * @return The result of the addition of the two numbers
      */
     @Override
-    public Integer Add(Integer number1, Integer number2) {
+    public Integer add(Integer number1, Integer number2) {
         return number1 + number2;
     }
 
@@ -27,7 +27,7 @@ public class CalculateImpl implements Calculate {
      * @return The result of the subtraction of one number from another
      */
     @Override
-    public Integer Subtract(Integer number1, Integer number2) { return number1 - number2; }
+    public Integer subtract(Integer number1, Integer number2) { return number1 - number2; }
 
     /**
      * Multiplies one number with another
@@ -37,7 +37,7 @@ public class CalculateImpl implements Calculate {
      * @return The result of the multiplication of one number with another
      */
     @Override
-    public Integer Multiply(Integer number1, Integer number2) {
+    public Integer multiply(Integer number1, Integer number2) {
         return number1 * number2;
     }
 
@@ -49,7 +49,7 @@ public class CalculateImpl implements Calculate {
      * @return The result of the division
      */
     @Override
-    public Integer Divide(Integer dividend, Integer divisor) {
+    public Integer divide(Integer dividend, Integer divisor) {
         return dividend == 0 || divisor == 0 ? 0 : dividend / divisor;
     }
 
@@ -61,7 +61,7 @@ public class CalculateImpl implements Calculate {
      * @return base to the power of the exponent
      */
     @Override
-    public Integer Power(Integer base, Integer exponent) {
+    public Integer power(Integer base, Integer exponent) {
         //TO DO validation to check the range and throw exception
         return (int) Math.pow(base, exponent);
     }
