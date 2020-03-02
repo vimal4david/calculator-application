@@ -74,6 +74,10 @@ public class StaticPageController {
             case Multiplication:
                 answer = calculate.Multiply(number1, number2);
                 break;
+
+            case Power:
+                answer = calculate.Power(number1, number2);
+                break;
         }
 
         model.addAttribute("answer", answer);

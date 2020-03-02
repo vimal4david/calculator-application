@@ -5,6 +5,7 @@ public enum CalculationType {
     Addition,
     Subtraction,
     Multiplication,
-    Division
+    Division,
+    Power
 
 }
