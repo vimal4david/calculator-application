@@ -27,6 +27,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <sortpom-maven-plugin.version>2.11.0</sortpom-maven-plugin.version>
         <spotbugs-maven-plugin.version>3.1.12.2</spotbugs-maven-plugin.version>
+        <versions-maven-plugin.version>2.7</versions-maven-plugin.version>
     </properties>
 
     <dependencies>
@@ -141,6 +142,38 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>${versions-maven-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>update-properties</goal>
+                        </goals>
+                        <configuration>
+                            <rulesUri>file:///${session.executionRootDirectory}/maven-version-rules.xml</rulesUri>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
+    <profiles>
+        <profile>
+            <id>versions</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>versions-maven-plugin</artifactId>
+                    </plugin>
+                </plugins>
+            </build>
+            <properties>
+                <allowMajorUpdates>true</allowMajorUpdates>
+            </properties>
+        </profile>
+    </profiles>
 </project>
