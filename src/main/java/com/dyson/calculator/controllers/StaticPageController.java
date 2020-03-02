@@ -59,24 +59,24 @@ public class StaticPageController {
                 number2 = calculationModel.getNumber2();
 
         switch(calculationModel.getCalculationType()) {
-            case Addition:
-                answer = calculate.Add(number1, number2);
+            case ADDITION:
+                answer = calculate.add(number1, number2);
                 break;
 
-            case Subtraction:
-                answer = calculate.Subtract(number1, number2);
+            case SUBTRACTION:
+                answer = calculate.subtract(number1, number2);
                 break;
 
-            case Division:
-                answer = calculate.Divide(number1, number2);
+            case DIVISION:
+                answer = calculate.divide(number1, number2);
                 break;
 
-            case Multiplication:
-                answer = calculate.Multiply(number1, number2);
+            case MULTIPLICATION:
+                answer = calculate.multiply(number1, number2);
                 break;
 
-            case Power:
-                answer = calculate.Power(number1, number2);
+            case POWER:
+                answer = calculate.power(number1, number2);
                 break;
         }
 

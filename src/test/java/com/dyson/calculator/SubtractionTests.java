@@ -25,7 +25,7 @@ public class SubtractionTests {
 				expected = 48;
 
 		// Act
-		Integer answer = calculate.Subtract(number1, number2);
+		Integer answer = calculate.subtract(number1, number2);
 
 		// Assert
 		assertThat(answer, is(expected));
@@ -39,7 +39,7 @@ public class SubtractionTests {
 				expected = 50;
 
 		// Act
-		Integer answer = calculate.Subtract(number1, number2);
+		Integer answer = calculate.subtract(number1, number2);
 
 		// Assert
 		assertThat(answer, is(expected));
@@ -53,7 +53,7 @@ public class SubtractionTests {
 				expected = -50;
 
 		// Act
-		Integer answer = calculate.Subtract(number1, number2);
+		Integer answer = calculate.subtract(number1, number2);
 
 		// Assert
 		assertThat(answer, is(expected));
@@ -67,7 +67,7 @@ public class SubtractionTests {
 				expected = 0;
 
 		// Act
-		Integer answer = calculate.Subtract(number1, number2);
+		Integer answer = calculate.subtract(number1, number2);
 
 		// Assert
 		assertThat(answer, is(expected));
@@ -81,7 +81,7 @@ public class SubtractionTests {
 				expected = 0;
 
 		// Act
-		Integer answer = calculate.Subtract(number1, number2);
+		Integer answer = calculate.subtract(number1, number2);
 
 		// Assert
 		assertThat(answer, is(expected));

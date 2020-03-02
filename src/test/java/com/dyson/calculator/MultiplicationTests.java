@@ -25,7 +25,7 @@ public class MultiplicationTests {
 				expected = 100;
 
 		// Act
-		Integer answer = calculate.Multiply(number1, number2);
+		Integer answer = calculate.multiply(number1, number2);
 
 		// Assert
 		assertThat(answer, is(expected));
@@ -39,7 +39,7 @@ public class MultiplicationTests {
 				expected = 0;
 
 		// Act
-		Integer answer = calculate.Multiply(number1, number2);
+		Integer answer = calculate.multiply(number1, number2);
 
 		// Assert
 		assertThat(answer, is(expected));
@@ -53,7 +53,7 @@ public class MultiplicationTests {
 				expected = 0;
 
 		// Act
-		Integer answer = calculate.Multiply(number1, number2);
+		Integer answer = calculate.multiply(number1, number2);
 
 		// Assert
 		assertThat(answer, is(expected));
@@ -67,7 +67,7 @@ public class MultiplicationTests {
 				expected = -10;
 
 		// Act
-		Integer answer = calculate.Multiply(number1, number2);
+		Integer answer = calculate.multiply(number1, number2);
 
 		// Assert
 		assertThat(answer, is(expected));
@@ -81,7 +81,7 @@ public class MultiplicationTests {
 				expected = -20;
 
 		// Act
-		Integer answer = calculate.Multiply(number1, number2);
+		Integer answer = calculate.multiply(number1, number2);
 
 		// Assert
 		assertThat(answer, is(expected));
@@ -95,7 +95,7 @@ public class MultiplicationTests {
 				expected = 20;
 
 		// Act
-		Integer answer = calculate.Multiply(number1, number2);
+		Integer answer = calculate.multiply(number1, number2);
 
 		// Assert
 		assertThat(answer, is(expected));

@@ -25,7 +25,7 @@ public class AdditionTests {
 				expected = 52;
 
 		// Act
-		Integer answer = calculate.Add(number1, number2);
+		Integer answer = calculate.add(number1, number2);
 
 		// Assert
 		assertThat(answer, is(expected));
@@ -39,7 +39,7 @@ public class AdditionTests {
 				expected = 50;
 
 		// Act
-		Integer answer = calculate.Add(number1, number2);
+		Integer answer = calculate.add(number1, number2);
 
 		// Assert
 		assertThat(answer, is(expected));
@@ -53,7 +53,7 @@ public class AdditionTests {
 				expected = 0;
 
 		// Act
-		Integer answer = calculate.Add(number1, number2);
+		Integer answer = calculate.add(number1, number2);
 
 		// Assert
 		assertThat(answer, is(expected));
@@ -67,7 +67,7 @@ public class AdditionTests {
 				expected = -20;
 
 		// Act
-		Integer answer = calculate.Add(number1, number2);
+		Integer answer = calculate.add(number1, number2);
 
 		// Assert
 		assertThat(answer, is(expected));

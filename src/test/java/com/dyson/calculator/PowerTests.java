@@ -25,7 +25,7 @@ public class PowerTests {
 				expected = 16;
 
 		// Act
-		Integer answer = calculate.Power(number1, number2);
+		Integer answer = calculate.power(number1, number2);
 
 		// Assert
 		assertThat(answer, is(expected));
@@ -39,7 +39,7 @@ public class PowerTests {
 				expected = 1;
 
 		// Act
-		Integer answer = calculate.Power(number1, number2);
+		Integer answer = calculate.power(number1, number2);
 
 		// Assert
 		assertThat(answer, is(expected));
@@ -53,7 +53,7 @@ public class PowerTests {
 				expected = 1;
 
 		// Act
-		Integer answer = calculate.Power(number1, number2);
+		Integer answer = calculate.power(number1, number2);
 
 		// Assert
 		assertThat(answer, is(expected));
@@ -67,7 +67,7 @@ public class PowerTests {
 				expected = 4;
 
 		// Act
-		Integer answer = calculate.Power(number1, number2);
+		Integer answer = calculate.power(number1, number2);
 
 		// Assert
 		assertThat(answer, is(expected));

@@ -25,7 +25,7 @@ public class DivisionTests {
 				expected = 25;
 
 		// Act
-		Integer answer = calculate.Divide(dividend, divisor);
+		Integer answer = calculate.divide(dividend, divisor);
 
 		// Assert
 		assertThat(answer, is(expected));
@@ -39,7 +39,7 @@ public class DivisionTests {
 				expected = 0;
 
 		// Act
-		Integer answer = calculate.Divide(dividend, divisor);
+		Integer answer = calculate.divide(dividend, divisor);
 
 		// Assert
 		assertThat(answer, is(expected));
